@@ -1,21 +1,20 @@
+import React from 'react';
 import './App.css';
-import NavBar from './components/NavBar';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages';
+import Fume from './pages/fume';
+
 function App() {
-  let numerodeclase = 300;
   return (
-    <>
-    <NavBar></NavBar>
-    <div className="App">
-     <p style={
-      {
-        color:"salmon",
-        paddingTop:"10px",
-      }
-     }>bienvenidos al e-comerce {numerodeclase}</p>
-  <hr></hr>
-     <input placeholder='ingrese algun contenido'></input>
-    </div>
-    </>
+    <Router>
+    
+      <Navbar />
+      <Routes>
+        <Route path='/' exact component={Home} />
+        <Route path='/fume'component={Fume} />
+      </Routes>
+    </Router>
   );
 }
 
