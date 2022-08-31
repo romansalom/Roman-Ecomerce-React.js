@@ -1,12 +1,14 @@
 import React from 'react'
+import CartWidget from '../CartWidget';
 import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './NavbarElements';
+
 
 const Navbar = () => {
   return (
     <>
     <Nav>
         <NavLink to='/'>
-          <h1>logo</h1>  
+          <h1>Vape Store</h1>  
         </NavLink>
         <Bars />
         <NavMenu>
@@ -29,6 +31,7 @@ const Navbar = () => {
         </NavMenu>
         <NavBtn>
             <NavBtnLink to='/sing-in'>Sing in</NavBtnLink>
+            <NavBtnLink to='/carrito'> <CartWidget/></NavBtnLink>
         </NavBtn>
         
     </Nav>

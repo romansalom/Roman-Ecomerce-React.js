@@ -8,9 +8,8 @@ const Fume = () => {
         justifyContent: 'center',
         alignItems: 'center',
         height: '90vh'
-    }}
-    >
-        <h1>Fume</h1>
+    }}>
+        <h2>Fume</h2>
 
     </div>
   );
