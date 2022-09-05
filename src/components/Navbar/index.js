@@ -24,12 +24,13 @@ const Navbar = () => {
             <NavLink to='/contacto' activeStyle>
                 Contactanos
             </NavLink>
-            <NavLink to='/registro' activeStyle>
-                registrate
-            </NavLink>
-
+            
         </NavMenu>
         <NavBtn>
+        <NavBtnLink to='/registro'>
+                registrate
+            </NavBtnLink>
+
             <NavBtnLink to='/sing-in'>Sing in</NavBtnLink>
             <NavBtnLink to='/carrito'> <CartWidget/></NavBtnLink>
         </NavBtn>
