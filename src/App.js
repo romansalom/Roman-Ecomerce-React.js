@@ -6,6 +6,9 @@ import Itemlistcontainers from './conteiners/Itemlistcontainers';
 import Home from './pages';
 import Fume from './pages/fume';
 
+
+
+
 function App() {
   return (
     <Router>
@@ -16,6 +19,7 @@ function App() {
         <Route path='/fume'component={Fume} />
       </Routes>
       <Itemlistcontainers greeting={'hola bienvenidos a nuestra app'}/>
+    
     </Router>
 
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './styles.css';
-
-const ItemCount = ({stock , initial , onAdd}) => {
+const ItemCount = ({stock , initial , onAdd}) => 
+{
 
     const [count, SetCount] = useState(initial);
 
@@ -11,12 +11,12 @@ const ItemCount = ({stock , initial , onAdd}) => {
     }else{
     alert("no hay suficiente stock disponible");
   }
-}
+
 
 const handleDecrement = () => {
     if (count < stock){
         SetCount(count-1);
-    }{if
+    }if
         (count < 1){
             SetCount(0);
         }
@@ -25,7 +25,7 @@ const handleDecrement = () => {
 
     
 
-}
+
 
 useEffect (() => {
     console.log("se monto el ItemCount");
@@ -37,10 +37,11 @@ return(
         <h2>{count}</h2>
         <button onClick={handleAdd}>+</button>
         <button onClick={()=>onAdd(count)}>Agregar al carrito</button>
-        </div>
+     </div>
 
 );
-};
+}
+}
 
 
 
