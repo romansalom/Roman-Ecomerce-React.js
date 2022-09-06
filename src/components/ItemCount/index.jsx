@@ -13,14 +13,15 @@ const ItemCount = ({stock , initial , onAdd}) => {
   }
 }
 
-const handleDecrement = () => {
+const handleDecrement = () =>
+ {
     if (count < stock){
         SetCount(count-1);
-    }{if
+    }if
         (count < 1){
             SetCount(0);
         }
-    }
+    
     
 
     
