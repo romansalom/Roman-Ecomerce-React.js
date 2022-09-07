@@ -1,10 +1,13 @@
 import React from 'react'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
+import ItemCount from '../ItemCount'
 
 const CartWidget = () => {
   return (
 
-   < AiOutlineShoppingCart></AiOutlineShoppingCart>
+   < AiOutlineShoppingCart>
+   <ItemCount></ItemCount>
+   </AiOutlineShoppingCart>
    
   )
 }

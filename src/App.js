@@ -19,7 +19,7 @@ function App() {
         <Route path='/' exact component={Home} />
         <Route path='/fume'component={Fume} />
       </Routes>
-      <Itemlistcontainers greeting={'hola bienvenidos a nuestra app'}/>
+      <Itemlistcontainers greeting={''}/>
     
     
     </Router>
