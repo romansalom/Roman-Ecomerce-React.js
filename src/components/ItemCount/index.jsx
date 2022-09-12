@@ -1,49 +1,46 @@
-import React, { useState, useEffect } from 'react'
+import React, {useState, useEffect} from "react";
 import './styles.css';
 
-const ItemCount = ({stock , initial , onAdd}) => {
+const ItemCount = ({stock, initial, onAdd}) => {
 
-    const [count, SetCount] = useState(initial);
+    const [count, setCount] = useState(initial);
 
-    const handleAdd =() => {
-        if (count < stock){
-        SetCount(count+1);
-    }else{
-    alert("no hay suficiente stock disponible");
-  }
-}
-
-const handleDecrement = () =>
- {
-    if (count < stock){
-        SetCount(count-1);
-    }if
-        (count < 1){
-            SetCount(0);
+    const handleAdd = () => {
+        if(count < stock) {
+            setCount(count+1);
+        } else {
+            alert("No hay suficiente stock disponible");
         }
-    
-    
+    }
+
+    const handleDecrement = () => {
+      
+    }
+
+    const addCart = () => {
+        onAdd(count);
+        setCount(initial);
+    }
 
     
+    useEffect(()=> {
+       
+        console.log("Se montó el ItemCount");
+    }, []);
 
-}
+    
+    useEffect(()=> {
+        console.log("Se actualiza el estado!")
+    }, [count]);
 
-useEffect (() => {
-    console.log("se monto el ItemCount");
-}, [count]);
-
-return(
+    return (
     <div>
         <button onClick={handleDecrement}>-</button>
         <h2>{count}</h2>
         <button onClick={handleAdd}>+</button>
-        <button onClick={()=>onAdd(count)}>Agregar al carrito</button>
-        </div>
-
-);
+        <button onClick={addCart}>Agregar al carrito</button>
+    </div>
+    );
 };
-
-
-
 
 export default ItemCount;
