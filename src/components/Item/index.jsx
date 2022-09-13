@@ -25,7 +25,7 @@ const Item = ({product}) => {
                                             <p className="card-text">{product.description}</p>
                                             <p >sotck : {product.stock}</p>
                                             <p href="./">ver mas</p>
-                                                                                  
+                                                     <ItemCount></ItemCount>                             
                                         </div>
                                     </div>
                                     </div>

@@ -3,7 +3,7 @@ import './styles.css';
 // import { products } from '../../data/products';
 import ItemList from '../../components/ItemList';
 
-const ItemListContainer = ({greeting}) => {
+const Itemlistcontainers = ({greeting}) => {
 
   const [productos, setProductos] = useState([])
 
@@ -44,4 +44,4 @@ const ItemListContainer = ({greeting}) => {
   )
 }
 
-export default ItemListContainer;
+export default Itemlistcontainers;

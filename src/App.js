@@ -28,7 +28,7 @@ function App() {
       <Route path='/' exact component={Home} />
         <Route path='/fume'component={Fume} />
         <Route path="/" element={<Itemlistcontainers/>}/>
-        <Route path="/category/:categoryId" element={<Itemlistcontainers/>}/>
+        <Route path="/category/:categoryd" element={<Itemlistcontainers/>}/>
         <Route path="/detail/:productId" element={<ItemDitailconteiner/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
