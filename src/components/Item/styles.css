@@ -1,26 +1,27 @@
-
-.card {
-    padding: 10px;
-  margin-top: 20px;
-  box-pack: center;
-  flex-direction: center;
-  justify-content: center;
-  display: inline-block;
-  }
-  .card:hover {
-    transform: translateY(-15px);
-    transform: translateY(-15px);
-   box-shadow: 0 12px 16px rgba(5, 5, 5, 0.2);
-    box-shadow: 0 12px 16px rgba(5, 5, 5, 0.2);
-  }
-  .container {
-    max-width: 1170px;
-    margin: auto;
-    line-height: 1.5;
-  }
-
-  .productos{
-    text-align: center;
-    padding: 20px;
+section{
+  background-color: rgb(255, 255, 255);
 }
-  
+.vermas{
+  color: blue;
+}
+
+.card-img-top{
+display: flex;
+max-width: 20rem;
+}
+
+.card{
+max-width: 20rem;
+margin-left: auto;
+margin-right: auto;
+padding-top: 30px;
+
+}
+.card:hover {
+transform: translateY(-15px);
+transform: translateY(-15px);
+box-shadow: 0 12px 16px rgba(5, 5, 5, 0.2);
+box-shadow: 0 12px 16px rgba(5, 5, 5, 0.2);
+}
+.container{
+margin-top: 20px;}

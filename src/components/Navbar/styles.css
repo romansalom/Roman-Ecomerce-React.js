@@ -5,7 +5,7 @@ ul {
     padding: 0;
     overflow: hidden;
     border: 1px solid #e7e7e7;
-    background-color: #f3f3f3;
+    background-color: #9f9292;
   }
   
   li {
@@ -14,7 +14,7 @@ ul {
   
   li a {
     display: block;
-    color: #666;
+    color: rgb(26, 17, 17);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -23,3 +23,29 @@ ul {
   li a:hover{
     background-color: #ddd;
   }
+
+  .vermas{
+    color: blue;
+  }
+
+.card-img-top{
+  display: flex;
+  max-width: 20rem;
+}
+
+.card{
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+ 
+}
+.card:hover {
+  transform: translateY(-15px);
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(5, 5, 5, 0.2);
+  box-shadow: 0 12px 16px rgba(5, 5, 5, 0.2);
+}
+.container{
+  margin-top: 20px;
+}
