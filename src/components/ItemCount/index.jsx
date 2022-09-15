@@ -14,6 +14,14 @@ const ItemCount = ({stock, initial, onAdd}) => {
     }
 
     const handleDecrement = () => {
+        if(count < stock) {
+            setCount(count-1);
+            if (count < 1)
+            setCount(1)
+            }
+         else {
+            alert("No hay suficiente stock disponible");
+        }
       
     }
 

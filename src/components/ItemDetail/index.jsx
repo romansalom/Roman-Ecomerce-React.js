@@ -9,7 +9,12 @@ const ItemDetail = ({product}) => {
         <img className="detail-img"src={product.image}  width={250} alt="product-detail"/>
         <div className='detail-subcontainer'>
           <h1>{product.title}</h1>
-          <ItemCount/>
+          <ItemCount
+          stock={100}
+          initial={1}
+          onAdd={(count) => alert(count)}
+
+          />
         </div>
     </div>
   )
