@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemCount from '../ItemCount'
 import './styles.css';
 import {useNavigate} from 'react-router-dom';
 
@@ -25,7 +24,7 @@ const Item = ({product}) => {
                                             <p className="card-text">{product.description}</p>
                                             <p >precio : {product.price}</p>
                                             <p className='vermas' onClick={handleNavigate}>ver mas</p>
-                                                     <ItemCount></ItemCount>                             
+                                                                         
                                         </div>
                                     </div>
                                     </div>

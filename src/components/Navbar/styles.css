@@ -24,28 +24,4 @@ ul {
     background-color: #ddd;
   }
 
-  .vermas{
-    color: blue;
-  }
-
-.card-img-top{
-  display: flex;
-  max-width: 20rem;
-}
-
-.card{
-  max-width: 20rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 30px;
- 
-}
-.card:hover {
-  transform: translateY(-15px);
-  transform: translateY(-15px);
-  box-shadow: 0 12px 16px rgba(5, 5, 5, 0.2);
-  box-shadow: 0 12px 16px rgba(5, 5, 5, 0.2);
-}
-.container{
-  margin-top: 20px;
-}
+  

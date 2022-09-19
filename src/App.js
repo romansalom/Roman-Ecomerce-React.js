@@ -10,7 +10,8 @@ import {
 import NotFound from './components/NotFound';
 import Itemlistcontainers from './conteiners/Itemlistcontainers';
 
-import ItemDitailconteiner from './../src/conteiners/ItemDitailconteiner'
+import ItemDitailconteiner from './../src/conteiners/ItemDitailconteiner';
+import Cart from './conteiners/CartContainer';
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Route path="/" element={<Itemlistcontainers/>}/>
       <Route path="/category/:categoryId" element={<Itemlistcontainers/>}/>
       <Route path="/detail/:productId" element={<ItemDitailconteiner/>}/>
+      <Route path='/cart' element={<Cart/>}></Route>
       <Route path="*" element={<NotFound/>}/>
     </Routes>
   </BrowserRouter>
