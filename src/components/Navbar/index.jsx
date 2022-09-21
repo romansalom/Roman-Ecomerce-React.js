@@ -3,7 +3,10 @@ import CartWidget from "../CartWidget";
 import "./styles.css";
 import {Link} from 'react-router-dom';
 
+
 const NavBar = () => {
+
+    
 
     return (
  <ul className="navbar-fondo">
@@ -25,6 +28,7 @@ const NavBar = () => {
                 <Link to="/category/jewelery">Vapos(joyas)</Link>
             </li>
             <CartWidget/>
+     
         </ul>
     );
 };
