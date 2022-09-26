@@ -1,8 +1,9 @@
 import React from 'react'
 import { useContext } from 'react';
 import { Shop } from '../../context/ShopProvider';
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid,  } from '@mui/x-data-grid';
 import { Button } from '@mui/material';
+import "./styles.css";
 
 
 const Cart = () => {
@@ -25,9 +26,11 @@ const columns  = [
     { field: 'image', headerName: 'image', width: 250, renderCell: renderImage },
     { field: 'title', headerName: 'Product', width: 450 },
     { field: 'quantity', headerName: 'Quantity ', width: 80 },
+    { field: 'precio', headerName: 'Precio ', width: 80 },
+    { field: 'total', headerName: 'Total  ', width: 80 },
     {
       field: 'remove',
-      headerName: 'Borrar',
+      headerName: '',
       renderCell: renderRemoveButton,
       width: 120,
     },
@@ -41,10 +44,12 @@ const columns  = [
       title: item.title,
       quantity : item.quantity,
       remove :item,
+      precio : item.price,
+      total : (item.price) * (item.quantity),
     })
 
   })
-
+  
 
   return (
     <div style={{ height: 400, width: '100%' }}>
@@ -55,7 +60,12 @@ const columns  = [
         rowsPerPageOptions={[15]}
         rowHeight={'150px'}
         ></DataGrid>
-        <Button  onClick={clearCart} color="error" variant='outlined'></Button>
+        <Button className='boton'  onClick={clearCart} color="error" variant='outlined'>Limpiar carrito</Button>
+
+        <Button className='boton'  onClick={clearCart}  variant='outlined'>Finalizar compra</Button>
+
+        <h4 className='total '>Total a pagar = {} </h4>
+
     </div>
    
   );
