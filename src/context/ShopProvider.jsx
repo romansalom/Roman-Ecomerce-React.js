@@ -31,13 +31,17 @@ const ShopProvider = ({children}) => {
         return cart.some(product => product.id === id)
     }
 
-    const removeItem =  (id) => setCart(cart.filter(product => product.id !== id));
+    const removeItem =  (ItemToRemuve) => {
+        const filterProducts = cart.filter(item => item !== ItemToRemuve);
+        setCart(filterProducts)
+    }
 
 
-    const clearCart = () => setCart([])
 
+    const clearCart = () => {setCart([])
+    }
     return (
-        <Shop.Provider value={{ cart , addItem, clearCart , removeItem, isInCart }}>
+        <Shop.Provider value={{ cart , addItem, clearCart , removeItem,  }}>
             {children}
         </Shop.Provider>
     )

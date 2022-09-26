@@ -8,10 +8,6 @@ ul {
     background-color: #9f9292;
   }
   
-  li {
-    float: center;
-  }
-  
   li a {
     display: block;
     color: rgb(26, 17, 17);

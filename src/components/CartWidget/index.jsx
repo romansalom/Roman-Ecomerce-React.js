@@ -1,15 +1,19 @@
 import React from 'react'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
-import ItemCount from '../ItemCount'
+import "./style.css";
 
 const CartWidget = () => {
-  return (
 
-   < AiOutlineShoppingCart>
-   <ItemCount></ItemCount>
-   </AiOutlineShoppingCart>
-   
-  )
-}
+    return (
+      <div style={{
+          position: 'absolute',
+          right: '20px',
+          top: '5px',
+      }}>
+        
+          <AiOutlineShoppingCart color='green' size={40}/>
+      </div>
+    )
+    }
 
 export default CartWidget

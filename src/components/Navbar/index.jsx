@@ -2,6 +2,7 @@ import React from "react";
 import CartWidget from "../CartWidget";
 import "./styles.css";
 import {Link} from 'react-router-dom';
+import { Button } from "bootstrap";
 
 
 const NavBar = () => {
@@ -27,6 +28,8 @@ const NavBar = () => {
             <li>
                 <Link to="/category/jewelery">Vapos(joyas)</Link>
             </li>
+          
+            
             <CartWidget/>
      
         </ul>
