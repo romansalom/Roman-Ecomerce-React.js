@@ -11,7 +11,7 @@ const CartWidget = () => {
           top: '5px',
       }}>
         
-          <AiOutlineShoppingCart  color='green' size={40} />
+          <AiOutlineShoppingCart color='green' size={40}/>
       </div>
     )
     }

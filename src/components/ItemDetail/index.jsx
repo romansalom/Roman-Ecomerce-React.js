@@ -14,11 +14,12 @@ const navigate = useNavigate();
 const {addItem} = useContext (Shop);
 
   const addCart = (quantity) => {
+    const productToSave = {...product, quantity: qty}
+      addItem(productToSave)
     setQty(quantity)};
 
     const handleFinish = () => {
-      const productToSave = {...product, quantity: qty}
-      addItem(productToSave)
+      
       navigate("/cart");
 
     }
@@ -33,7 +34,8 @@ const {addItem} = useContext (Shop);
           {!qty? <ItemCount
           stock={100}
           initial={1}
-          onAdd={addCart}/> : <button onClick={handleFinish}> finalizar compra</button>}
+          onAdd={addCart}/> :
+          <button onClick={handleFinish}> finalizar compra</button>}
         </div>
     </div>
   )
