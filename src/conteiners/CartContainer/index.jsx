@@ -7,7 +7,7 @@ import "./styles.css";
 
 
 const Cart = () => {
-const {cart , clearCart , removeItem} = useContext(Shop);
+const {cart , clearCart , removeItem, total} = useContext(Shop);
 
 const renderImage = (image) => {
   return (
@@ -15,11 +15,19 @@ const renderImage = (image) => {
   )
 }
 
+const handleBuy = () => {
+  const importeTotal = total ();
+}
+
+
+
 const renderRemoveButton = (item) => {
   const product = item.value
   return(
     <Button onClick={()=> removeItem(product)} variant="contained" color="error">Borrar</Button>
   )}
+
+
 
 
 const columns  = [
@@ -58,14 +66,13 @@ const columns  = [
         columns={columns}
         pageSize={15}
         rowsPerPageOptions={[15]}
-        rowHeight={'150px'}
+        rowHeight={150}
         ></DataGrid>
         <Button className='boton'  onClick={clearCart} color="error" variant='outlined'>Limpiar carrito</Button>
 
-        <Button className='boton'  onClick={clearCart}  variant='outlined'>Finalizar compra</Button>
-
-        <h4 className='total '>Total a pagar = {} </h4>
-
+        <Button className='boton'  onClick={handleBuy}  variant='outlined'>Finalizar compra</Button>
+        
+        
     </div>
    
   );

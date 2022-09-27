@@ -14,12 +14,12 @@ const navigate = useNavigate();
 const {addItem} = useContext (Shop);
 
   const addCart = (quantity) => {
-    const productToSave = {...product, quantity: qty}
-      addItem(productToSave)
-    setQty(quantity)};
-
+    setQty(quantity)}
+    
+    
     const handleFinish = () => {
-      
+      const productToSave = {...product, quantity: qty}
+      addItem(productToSave)
       navigate("/cart");
 
     }

@@ -40,8 +40,14 @@ const ShopProvider = ({children}) => {
 
     const clearCart = () => {setCart([])
     }
+
+    const total = () => {
+        const total = cart.reduce((acc, product) => acc += product.quantity * product.price, 0);
+        console.log(total);
+        return total;
+    }
     return (
-        <Shop.Provider value={{ cart , addItem, clearCart , removeItem,  }}>
+        <Shop.Provider value={{ cart , addItem, clearCart , removeItem,total }}>
             {children}
         </Shop.Provider>
     )
