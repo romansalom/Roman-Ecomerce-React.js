@@ -4,6 +4,8 @@ import { Shop } from '../../context/ShopProvider';
 import { DataGrid,  } from '@mui/x-data-grid';
 import { Button } from '@mui/material';
 import "./styles.css";
+import { Link } from 'react-router-dom';
+
 
 
 const Cart = () => {
@@ -61,6 +63,15 @@ const columns  = [
 
   return (
     <div style={{ height: 400, width: '100%' }}>
+      {! cart.lenght
+      ? <div className="emptyContainer">
+        <p>no hay productos en el carrito</p>
+        <Link to ="/"><button>volver al catalogo</button></Link>
+        </div>
+        : cart.map(product => {
+          return <  Cart key={product.id} product={product}/>
+        }
+        )}
       <DataGrid
         rows={filas}
         columns={columns}
