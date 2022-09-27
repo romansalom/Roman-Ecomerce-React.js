@@ -43,11 +43,11 @@ const ShopProvider = ({children}) => {
 
     const total = () => {
         const total = cart.reduce((acc, product) => acc += product.quantity * product.price, 0);
-        console.log(total);
+        alert(total);
         return total;
     }
     return (
-        <Shop.Provider value={{ cart , addItem, clearCart , removeItem,total }}>
+        <Shop.Provider value={{ cart , addItem, clearCart , removeItem, total }}>
             {children}
         </Shop.Provider>
     )

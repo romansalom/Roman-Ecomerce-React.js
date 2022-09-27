@@ -72,7 +72,7 @@ const columns  = [
 
         <Button className='boton'  onClick={handleBuy}  variant='outlined'>Finalizar compra</Button>
         
-        
+       
     </div>
    
   );
