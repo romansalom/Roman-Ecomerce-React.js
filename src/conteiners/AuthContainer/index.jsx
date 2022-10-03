@@ -98,9 +98,9 @@ const AuthContainer = ({ handleClose, login, signUp }) => {
                 })
                 .finally(() => {
                     setLoading(false);
-                    setEmail("");
-                    setPassword("");
-                    setConfirmPassword("");
+                    setEmail("/");
+                    setPassword("/");
+                    setConfirmPassword("/");
                 });
         }
     };

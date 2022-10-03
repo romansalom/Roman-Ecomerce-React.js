@@ -2,14 +2,18 @@ import React from 'react'
 import { useContext } from 'react';
 import { Shop } from '../../context/ShopProvider';
 import { DataGrid,  } from '@mui/x-data-grid';
-import { Button } from '@mui/material';
+import { Button, CircularProgress } from '@mui/material';
 import "./styles.css";
 import { Link } from 'react-router-dom';
-
-
+import ordenGenerada from '../../services/generarOrden';
+import { collection, addDoc,  } from 'firebase/firestore';
+import { db } from '../../firebase/config';
+import {doc, updateDoc, getDoc} from "firebase/firestore";
+import { useState } from 'react';
 
 const Cart = () => {
 const {cart , clearCart , removeItem, total} = useContext(Shop);
+const [loading , setLoading] = useState(false);
 
 const renderImage = (image) => {
   return (
@@ -17,8 +21,26 @@ const renderImage = (image) => {
   )
 }
 
-const handleBuy = () => {
+const handleBuy = async() => {
+  setLoading(true);
   const importeTotal = total ();
+  const orden = ordenGenerada("nombrexx" , "emailxx" ,121212121212, cart , importeTotal);
+  console.log({orden});
+
+  const docRef = await addDoc (collection(db ,"orders"),orden);
+  cart.forEach(async(prodcutoEncarrito) =>{
+    
+    const productRef = doc(db, "products", prodcutoEncarrito.id);
+    const productSnap = await getDoc(productRef);
+    
+    await updateDoc (productRef, {
+      stock : productSnap.data().stock - prodcutoEncarrito.quantity,
+    });
+    
+  });
+  setLoading(false);
+  alert("Gracias por su compra, orden generada con id : " + docRef.id);
+
 }
 
 
@@ -80,10 +102,22 @@ const columns  = [
         rowHeight={150}
         ></DataGrid>
         <Button className='boton'  onClick={clearCart} color="error" variant='outlined'>Limpiar carrito</Button>
-
+        {loading ?  (<div
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            width: "100%",
+                            height: "100%",
+                            alignItems: "center",
+                        }}
+                    >
+                        <CircularProgress />
+                    </div>):
         <Button className='boton'  onClick={handleBuy}  variant='outlined'>Finalizar compra</Button>
+                    }
         
-       <h4>total a pagar = {total ()}</h4>
+       <h4>total a pagar = {total ()}$</h4>
     </div>
    
   );

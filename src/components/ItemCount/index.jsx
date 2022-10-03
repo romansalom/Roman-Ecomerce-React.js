@@ -20,6 +20,9 @@ const ItemCount = ({stock, initial, onAdd}) => {
             setCount(1)
             }
          else {
+            setCount(count-1);
+            if (count < 1)
+        
             alert("No hay suficiente stock disponible");
         }
       

@@ -40,6 +40,7 @@ const NavBar = () => {
             <li>
                 <Link to="/category/equipos">Vapos</Link>
             </li>
+            
             <div className="buttons-container">
                     <Button
                         size="medium"

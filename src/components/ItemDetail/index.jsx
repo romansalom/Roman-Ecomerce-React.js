@@ -33,7 +33,7 @@ const {addItem} = useContext (Shop);
           <h1>{product.title}</h1>
           <h3> {product.description}</h3>
           {!qty? <ItemCount
-          stock={100}
+          stock={product.stock}
           initial={1}
           onAdd={addCart}/> :
           <button onClick={handleFinish}> finalizar compra</button>}
