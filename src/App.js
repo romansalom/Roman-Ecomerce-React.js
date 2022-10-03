@@ -27,7 +27,7 @@ function App() {
       <Route path='/cart' element={<Cart/>}></Route>
       <Route path="*" element={<NotFound/>}/>
     </Routes>
-  </BrowserRouter>
+  </BrowserRouter> 
   </ShopProvider>
 
 
