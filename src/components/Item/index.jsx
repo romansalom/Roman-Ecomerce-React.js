@@ -8,35 +8,15 @@ const Item = ({product}) => {
     const handleNavigate = () => {
       navigate(`/detail/${product.id}`)
     }
-
-        return (
-          
-            <section className='productos'>
-
-            <div className="container">
-            <div className="row">
-                <div className="col">
-                    <div className="card">
-
-                                        <img src={product.image} className="card-img-top" width={250} alt="foto" ></img>
-                                        <div class="card-body">
-                                            <h5 className="card-title">{product.title}</h5>
-                                            <p className="card-text">{product.description}</p>
-                                            <p >precio : {product.price}</p>
-                                            <p className='vermas' onClick={handleNavigate}>ver mas</p>
-                                                                         
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                    
-                                </section>
-                   
-                  
-            
-                )
-            }
-        
-            
-            export default Item
+  
+    return (
+      <div className='card-container' onClick={handleNavigate}>
+        <img className="card-img" src={product.image} width={350} alt="product"/>
+        <h1 className='card-title'>{product.title}</h1>
+        <h1 className='card-price'>Precio : {product.price}$</h1>
+        <p className='vermas' onClick={handleNavigate}>ver mas</p>
+      </div>
+    )
+  }
+                
+                export default Item

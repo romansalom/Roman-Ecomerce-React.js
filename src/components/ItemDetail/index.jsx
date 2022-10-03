@@ -31,6 +31,7 @@ const {addItem} = useContext (Shop);
         <img className="detail-img"src={product.image}  width={250} alt="product-detail"/>
         <div className="detail-subcontainer">
           <h1>{product.title}</h1>
+          <h3> {product.description}</h3>
           {!qty? <ItemCount
           stock={100}
           initial={1}
