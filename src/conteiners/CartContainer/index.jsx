@@ -24,8 +24,10 @@ const renderImage = (image) => {
 const handleBuy = async() => {
   setLoading(true);
   const importeTotal = total ();
-  const orden = ordenGenerada("nombrexx" , "emailxx" ,121212121212, cart , importeTotal);
+  const orden = ordenGenerada(prompt("Complete su nombre") ,prompt("Complete su Email")  ,prompt("Numero") , cart , importeTotal);
   console.log({orden});
+  
+  
 
   const docRef = await addDoc (collection(db ,"orders"),orden);
   cart.forEach(async(prodcutoEncarrito) =>{
@@ -116,6 +118,7 @@ const columns  = [
                     </div>):
         <Button className='boton'  onClick={handleBuy}  variant='outlined'>Finalizar compra</Button>
                     }
+
         
        <h4>total a pagar = {total ()}$</h4>
     </div>

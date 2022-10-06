@@ -26,6 +26,7 @@ const CartWidget = () => {
           position: 'absolute',
           right: '20px',
           top: '5px',
+          color : 'black'
       }}>
         
           <AiOutlineShoppingCart color='green' size={40}/>

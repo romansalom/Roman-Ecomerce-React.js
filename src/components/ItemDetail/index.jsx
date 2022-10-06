@@ -13,13 +13,14 @@ const [qty, setQty] = useState(0);
 const navigate = useNavigate();
 const {addItem} = useContext (Shop);
 
-  const addCart = (quantity) => {
-    setQty(quantity)}
+  const addCart = (qty) => {
+    const productToSave = {...product, quantity: qty}
+    addItem(productToSave)
+    setQty(qty)}
     
     
+   
     const handleFinish = () => {
-      const productToSave = {...product, quantity: qty}
-      addItem(productToSave)
       navigate("/cart");
 
     }
