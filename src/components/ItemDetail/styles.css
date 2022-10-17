@@ -13,6 +13,7 @@
 .detail-img {
     height: 80vh;
     justify-content: left;
+    contain: content
 }
 
 ;

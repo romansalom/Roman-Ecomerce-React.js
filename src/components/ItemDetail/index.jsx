@@ -29,7 +29,7 @@ const {addItem} = useContext (Shop);
   
   return (
     <div className= "detail-container">
-        <img className="detail-img"src={product.image}  width={250} alt="product-detail"/>
+        <img className="detail-img"src={product.image}  width={550} alt="product-detail"/>
         <div className="detail-subcontainer">
           <h1>{product.title}</h1>
           <h3> {product.description}</h3>

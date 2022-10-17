@@ -12,7 +12,7 @@ import {doc, updateDoc, getDoc} from "firebase/firestore";
 import { useState } from 'react';
 
 const Cart = () => {
-const {cart , clearCart , removeItem, total} = useContext(Shop);
+const {cart , clearCart , removeItem, total, } = useContext(Shop);
 const [loading , setLoading] = useState(false);
 
 const renderImage = (image) => {
@@ -22,10 +22,13 @@ const renderImage = (image) => {
 }
 
 const handleBuy = async() => {
+  
+  
   setLoading(true);
+
   const importeTotal = total ();
   const orden = ordenGenerada(prompt("Complete su nombre") ,prompt("Complete su Email")  ,prompt("Numero") , cart , importeTotal);
-  console.log({orden});
+  console.log({orden}) ;
   
   
 
@@ -43,6 +46,9 @@ const handleBuy = async() => {
   setLoading(false);
   alert("Gracias por su compra, orden generada con id : " + docRef.id);
 
+  
+  
+  
 }
 
 
@@ -86,6 +92,7 @@ const columns  = [
   
 
   return (
+    /* NO ME FUNCIONA
     <div style={{ height: 400, width: '100%' }}>
       {! cart.lenght
       ? <div className="emptyContainer">
@@ -96,6 +103,9 @@ const columns  = [
           return <  Cart key={product.id} product={product}/>
         }
         )}
+        */
+        <div style={{ height: 400, width: '100%' }}>
+           <Link to ="/"><button>volver al catalogo</button></Link>
       <DataGrid
         rows={filas}
         columns={columns}
@@ -103,7 +113,7 @@ const columns  = [
         rowsPerPageOptions={[15]}
         rowHeight={150}
         ></DataGrid>
-        <Button className='boton'  onClick={clearCart} color="error" variant='outlined'>Limpiar carrito</Button>
+        <Button className='boton'  onClick={clearCart}  color="error" variant='outlined'>Limpiar carrito</Button>
         {loading ?  (<div
                         style={{
                             display: "flex",
